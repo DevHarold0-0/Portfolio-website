@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dev server</title>
+  </head>
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="header__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="header__link" href="#contact">Contact</a>
+          </li>
+          <li class="header__line"></li>
+          <li>
+            <button id="theme-toggle" class="header__sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="header__resume btn" href="#">Resume</a>
+          </li>
+        </ul>
+        <button class="header__bars">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li>
+            <a class="mobile-nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#contact">Contact</a>
+          </li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button id="theme-toggle" class="mobile-nav__sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="mobile-nav__btn btn" href="#">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End of Mobile Navigation -->
+    <main>
+      <section class="hero container">
+        <img class="hero__img" src="/hero.jpg" alt="Profile picture" />
+        <h2 class="hero__subtitle">Hi, I'm Kwasy!👋</h2>
+        <h1 class="hero__title">
+          JUNIOR FRONT-END <br />
+          WEB DEVELOPER.
+        </h1>
+        <p class="hero__description">
+          A passionate <strong>Frontend</strong> and
+          <strong>aspiring Fullstack</strong> web developer and
+          <strong>UI/UX</strong>
+          enthusiast specialized in building stunning pixel-perfect interactive
+          websites/applications.
+        </p>
+        <a class="hero__btn btn" href="#">Reach Out</a>
+      </section>
+      <section id="about" class="about container section">
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">
+            Hello there! I'm Kwasy, a
+            <strong>Junior Frontend developer</strong> based near Delaware. I
+            love to use my noggin to problem solve and build interesting
+            application on the world wide web!
+          </p>
+          <p class="about__description">
+            Friends and coworkers know me as someone who’s constantly curious,
+            always seeking out the latest trends and best practices in my field.
+          </p>
+          <p class="about__description">
+            I recently helped create a <a>capstone project</a> that sparked my
+            love for web development and ever since then I've been eager to
+            learn as much as I can.
+          </p>
+          <hr class="about__hr" />
+          <h3 class="about__subtitle">Technologies</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">JavaScript (ES6+)</li>
+              <li class="about__list">HTML</li>
+              <li class="about__list">CSS</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">Haskell</li>
+              <li class="about__list">C/C++</li>
+              <li class="about__list">Python</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__img-wrapper">
+          <img
+            class="about__img lazy loading"
+            src="https://fakeimg.pl/2765"
+            data-src="/about.jpg"
+            alt="Profile picture"
+          />
+        </div>
+      </section>
+      <section id="featured" class="featured container section">
+        <h3 class="featured__subtitle">Featured project</h3>
+        <div class="featured__wrapper">
+          <h2 class="featured__title">Expess Shopping</h2>
+          <a class="featured__link" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="featured__description">
+          Express shopping is a website that aims to help viditors pick outfits
+          tailored to their needs and occasions. --Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Tempora unde exercitationem ullam
+          dolorem? Culpa minus dolorem nulla voluptas obcaecati architecto
+          nostrum et quia, neque provident totam asperiores eius vero dicta.--
+        </p>
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Tech stack</h3>
+            <ul class="featured__tech-stack">
+              <li class="featured__info">HTML</li>
+              <li class="featured__info">CSS</li>
+              <li class="featured__info">JavaScript</li>
+              <li class="featured__info">Node js</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Project type</h3>
+            <p class="featured__info">Fullstack</p>
+          </div>
+          <div>
+            <h3 class="featured__label">Timeline</h3>
+            <p class="featured__info">February 2024 - May 2024</p>
+          </div>
+        </div>
+        <div class="featured__img-container">
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1896x1072"
+              data-src="/home.jpg"
+              alt="Express Shopping home page"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1920x1080"
+              data-src="/joke.jpg"
+              alt="Express Shopping humor"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1920x1080"
+              data-src="/outfits.jpg"
+              alt="Express Shopping outfits"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1920x1080"
+              data-src="/trending.jpg"
+              alt="Express Shopping trending"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1920x1080"
+              data-src="/gemeni.jpg"
+              alt="Express Shopping a.i."
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1920x1080"
+              data-src="/search.jpg"
+              alt="Express Shopping search"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1920x1080"
+              data-src="/foot.jpg"
+              alt="Express Shopping footer"
+            />
+          </div>
+          <div class="featured__img-wrapper">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1920x1080"
+              data-src="/questions.jpg"
+              alt="Express Shopping faq"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="work container section">
+        <h2 class="work__title">Projects</h2>
+        <p class="work__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam illo,
+          dolorum magni voluptate tempora alias odio, ipsam totam placeat
+          asperiores quisquam rem quaerat necessitatibus tempore et sint aliquam
+          cupiditate ex?
+        </p>
+        <div class="work__container">
+          <!-- Project 1 -->
+          <h3 class="work__project-title">Calculator</h3>
+          <div class="work__img-wrapper work__image1">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1000"
+              data-src="/calculator.jpg"
+              alt="calculator website"
+            />
+          </div>
+          <div class="work__project work__content1">
+            <h3 class="work__project-subtitle">Calculator</h3>
+            <p class="work__project-description1">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+              expedita quae reiciendis dolorum debitis numquam.
+            </p>
+            <p class="work__project-description2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              tempora aut perferendis in, quam commodi quo dolores corrupti
+              architecto harum veritatis molestiae nam ut nemo beatae officiis
+              fugit ullam pariatur?
+            </p>
+            <a class="btn work__project-btn" href="#">Website</a>
+          </div>
+          <!-- Project 2 -->
+          <h3 class="work__project-title">Etch-A-Sketch</h3>
+          <div class="work__img-wrapper work__image2">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/1000"
+              data-src="/etch-a-sketch.jpg"
+              alt="etch a sketch website"
+            />
+          </div>
+          <div class="work__project work__content2">
+            <h3 class="work__project-subtitle">Etch-A-Sketch</h3>
+            <p class="work__project-description1">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+              quo facere temporibus excepturi.
+            </p>
+            <p class="work__project-description2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis neque minus odit, omnis provident rem harum! Unde
+              commodi odio recusandae alias. Magnam rerum sequi dolor aperiam,
+              delectus eius non iusto.
+            </p>
+            <a class="btn work__project-btn" href="#">Website</a>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact container section">
+        <h2 class="contact__title">Get in contact</h2>
+        <p class="contact__description">
+          Whether you need some extra hands on deck, have bussiness inquiries or
+          just want to say hi, my inbox is always open so feel free to reach out
+          and I will get back to you as soon as possible.
+        </p>
+        <a
+          class="contact__btn btn"
+          href="mailto:kwasyAhama@gmail.com"
+          target="_blank"
+          >Reach out</a
+        >
+      </section>
+    </main>
+    <footer class="footer container section">
+      <h3 class="footer__title">~ Kwasy Ahama ~</h3>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
