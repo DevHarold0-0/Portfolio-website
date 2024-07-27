@@ -53,6 +53,10 @@
   margin-left: 0.5em;
 }
 
+.about__img {
+  border-radius: 3%;
+}
+
 /* xs */
 @media (min-width: 475px) {
   .about {
